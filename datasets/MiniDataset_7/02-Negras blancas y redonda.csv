@@ -1,0 +1,10 @@
+numero,pentagrama,clase,tipo,altura,puntillo,duracion_pulsos,x_cabeza,y_cabeza,grupo_id,acorde_id
+1,1,nota,blanca,DO5,0,2,180,150,,
+2,1,nota,blanca,SOL4,0,2,256,180,,
+3,1,nota,negra,LA4,0,1,348,170,,
+4,1,nota,negra,SI4,0,1,408,160,,
+5,1,nota,blanca,DO5,0,2,468,150,,
+6,1,nota,blanca,MI4,0,2,560,200,,
+7,1,nota,negra,FA4,0,1,636,190,,
+8,1,nota,negra,SOL4,0,1,696,180,,
+9,1,nota,redonda,DO5,0,4,772,150,,

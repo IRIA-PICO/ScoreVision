@@ -1,0 +1,721 @@
+/* ScoreVision — la melodía tiñe la sala */
+
+:root {
+  --noche: #1a1540;
+  --noche-2: #231c55;
+  --noche-3: #2e2668;
+  --texto: #ece9ff;
+  --texto-suave: #a9a3d6;
+  --papel: #ffffff;
+
+  --do: #ff3d6e;
+  --re: #ff8a2b;
+  --mi: #ffd23f;
+  --fa: #3ddc84;
+  --sol: #22d3ee;
+  --la: #5b7cfa;
+  --si: #b45cf5;
+
+  --aura: #5b7cfa;          /* cambia con la nota que suena */
+  --radio-papel: 22px;
+  --fuente: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--fuente);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--texto);
+  background:
+    radial-gradient(1200px 700px at 85% -10%, #2c2370 0%, transparent 60%),
+    radial-gradient(900px 600px at -10% 110%, #241a5e 0%, transparent 55%),
+    var(--noche);
+  overflow-x: hidden;
+}
+
+#fondo {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cabecera, .canciones, .escenario, .piano-zona, .pie { position: relative; z-index: 1; }
+
+button { font: inherit; color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--mi);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------- cabecera */
+.cabecera {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 28px 24px 8px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  margin: 0;
+  font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+  font-weight: 800;
+  font-stretch: 78%;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  /* el nombre lleva los siete colores de las notas */
+  background: linear-gradient(90deg, var(--do), var(--re), var(--mi), var(--fa), var(--sol), var(--la), var(--si));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lema {
+  margin: 6px 0 0;
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+.modos {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modo {
+  border: 0;
+  background: transparent;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--texto-suave);
+  cursor: pointer;
+  transition: background .25s, color .25s;
+}
+
+.modo:hover { color: var(--texto); }
+
+.modo.activo {
+  background: var(--texto);
+  color: var(--noche);
+}
+
+/* ---------------------------------------------------------------- canciones */
+.canciones {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 18px 24px 22px;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--noche-3) transparent;
+}
+
+.tarjeta {
+  flex: 0 0 auto;
+  width: 200px;
+  scroll-snap-align: start;
+  text-align: left;
+  padding: 14px 14px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--noche-2);
+  cursor: pointer;
+  transition: border-color .25s, background .25s, transform .25s;
+}
+
+.tarjeta:hover { background: var(--noche-3); }
+
+.tarjeta.activa {
+  background: var(--noche-3);
+  border-color: var(--color-tarjeta, var(--texto));
+  box-shadow: 0 0 0 1px var(--color-tarjeta, var(--texto)) inset;
+}
+
+/* contorno de la melodía: un punto por nota, a su altura y en su color */
+.contorno {
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-titulo {
+  display: block;
+  font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.2;
+}
+
+.tarjeta-autor {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+/* ---------------------------------------------------------------- escenario */
+.escenario {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 28px;
+  align-items: start;
+}
+
+.papel-zona { position: relative; }
+
+/* el halo: el elemento memorable */
+.halo {
+  position: absolute;
+  inset: 4% 6% 12%;
+  border-radius: 40px;
+  background: var(--aura);
+  filter: blur(70px);
+  opacity: 0.55;
+  transition: background-color .5s ease, opacity .5s ease;
+  pointer-events: none;
+}
+
+body.sonando .halo { opacity: 0.85; }
+
+.papel {
+  position: relative;
+  background: var(--papel);
+  border-radius: var(--radio-papel);
+  padding: 10px;
+  box-shadow: 0 30px 60px -20px rgba(8, 4, 30, 0.7);
+}
+
+.papel-scroll {
+  max-height: min(68vh, 760px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: calc(var(--radio-papel) - 8px);
+  scrollbar-width: thin;
+}
+
+.lienzo {
+  position: relative;
+  line-height: 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.lienzo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lienzo canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* en modo tocar y flow el dedo no hace scroll: toca */
+body[data-modo="tocar"] .lienzo canvas,
+body[data-modo="flow"] .lienzo canvas { touch-action: none; cursor: pointer; }
+body[data-modo="escuchar"] .lienzo canvas,
+body[data-modo="inspector"] .lienzo canvas { cursor: pointer; }
+
+.capa-paso {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 45% 0 0);
+}
+
+.corte {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 55%;
+  width: 2px;
+  background: var(--sol);
+  box-shadow: 0 0 12px var(--sol);
+  pointer-events: none;
+}
+
+.ayuda {
+  margin: 14px 4px 0;
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  min-height: 1.5em;
+}
+
+.comparador { margin: 10px 4px 0; }
+
+.comparador label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 4px;
+}
+
+/* ---------------------------------------------------------------- panel */
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: sticky;
+  top: 16px;
+}
+
+.ahora { min-height: 128px; }
+
+.ahora-nota {
+  font-size: clamp(4.2rem, 8vw, 6.2rem);
+  font-weight: 800;
+  font-stretch: 75%;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--color-ahora, var(--texto));
+  transition: color .2s;
+}
+
+.ahora-nota.vacia { color: var(--noche-3); }
+
+.ahora-nota sub {
+  font-size: 0.38em;
+  font-weight: 600;
+  vertical-align: baseline;
+  margin-left: 2px;
+  opacity: 0.8;
+}
+
+.ahora-nota.golpe { animation: golpe .35s ease-out; }
+
+@keyframes golpe {
+  0% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.ahora-detalle {
+  margin-top: 8px;
+  color: var(--texto-suave);
+}
+
+.transporte {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boton-play, .boton-stop {
+  border: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  flex: none;
+}
+
+.boton-play {
+  width: 64px;
+  height: 64px;
+  background: var(--texto);
+  color: var(--noche);
+  box-shadow: 0 0 0 0 var(--aura);
+  transition: box-shadow .4s, transform .15s;
+}
+
+.boton-play:active { transform: scale(0.94); }
+body.sonando .boton-play { box-shadow: 0 0 0 8px color-mix(in srgb, var(--aura) 35%, transparent); }
+
+.boton-play svg, .boton-stop svg { width: 26px; height: 26px; fill: currentColor; }
+.boton-play .icono-pausa { display: none; }
+body.sonando .boton-play .icono-play { display: none; }
+body.sonando .boton-play .icono-pausa { display: block; }
+
+.boton-stop {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.boton-stop svg { width: 16px; height: 16px; }
+
+.progreso {
+  flex: 1;
+  height: 8px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.progreso-relleno {
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: var(--aura);
+  transition: background-color .4s;
+}
+
+.tempo label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-bottom: 4px;
+}
+
+.tempo output { color: var(--texto); font-weight: 600; }
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--texto);
+}
+
+.contador {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+}
+
+.contador strong { color: var(--texto); font-size: 1.4rem; }
+
+/* en Tocar no hay transporte: suena lo que tocas */
+body[data-modo="tocar"] .transporte,
+body[data-modo="flow"] .transporte,
+body[data-modo="tocar"] .tempo,
+body[data-modo="inspector"] .transporte,
+body[data-modo="inspector"] .tempo,
+body[data-modo="inspector"] .ahora { display: none; }
+
+/* ---------------------------------------------------------------- instrumento */
+.instrumento {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.instrumento button {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+  cursor: pointer;
+}
+
+.instrumento button[aria-checked="true"] {
+  background: var(--texto);
+  border-color: var(--texto);
+  color: var(--noche);
+  font-weight: 600;
+}
+
+body[data-modo="inspector"] .instrumento { display: none; }
+
+/* ---------------------------------------------------------------- cámara */
+body[data-modo="camara"] .papel,
+body[data-modo="camara"] .transporte,
+body[data-modo="camara"] .tempo { display: none; }
+
+.camara { position: relative; }
+
+.camara-marco {
+  position: relative;
+  border-radius: var(--radio-papel);
+  overflow: hidden;
+  background: #0d0a26;
+  min-height: 260px;
+  line-height: 0;
+}
+
+/* con la cámara encendida, el recuadro mide exactamente lo que el vídeo */
+.camara-marco.encendida {
+  min-height: 0;
+  box-shadow: 0 30px 60px -20px rgba(8, 4, 30, 0.7);
+}
+
+.camara-marco video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.camara-marco canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.camara-inicio {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 18px;
+  padding: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.camara-inicio p { margin: 0; max-width: 34ch; color: var(--texto-suave); }
+
+.boton-claro, .boton-borde {
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton-claro { border: 0; background: var(--texto); color: var(--noche); }
+
+.boton-borde {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  padding: 8px 16px;
+  font-weight: 600;
+}
+
+.camara-barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.camara-estado {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* ---------------------------------------------------------------- inspector */
+.inspector h2 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.pasos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  counter-reset: paso;
+}
+
+.pasos button {
+  width: 100%;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+/* los pasos sí son una secuencia: van numerados */
+.pasos button::before {
+  counter-increment: paso;
+  content: counter(paso);
+  font-weight: 700;
+  color: var(--texto-suave);
+  min-width: 1ch;
+}
+
+.pasos button.activo {
+  background: var(--texto);
+  color: var(--noche);
+}
+
+.pasos button.activo::before { color: var(--noche); }
+
+.paso-explicacion {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin: 12px 0 16px;
+}
+
+.ficha {
+  border-radius: 16px;
+  background: var(--noche-2);
+  padding: 14px 16px;
+}
+
+.ficha-vacia { margin: 0; color: var(--texto-suave); font-size: 0.92rem; }
+
+.ficha h3 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-stretch: 80%;
+  line-height: 1;
+}
+
+.ficha dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  margin: 12px 0;
+  font-size: 0.9rem;
+}
+
+.ficha dt { color: var(--texto-suave); }
+.ficha dd { margin: 0; }
+.ficha .como { margin: 0; font-size: 0.88rem; color: var(--texto-suave); }
+
+/* ---------------------------------------------------------------- piano */
+.piano-zona {
+  max-width: 1240px;
+  margin: 34px auto 0;
+  padding: 0 24px;
+  overflow-x: auto;
+}
+
+.piano {
+  position: relative;
+  display: flex;
+  height: 120px;
+  min-width: 720px;
+}
+
+.tecla {
+  position: relative;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.tecla.blanca {
+  flex: 1;
+  margin: 0 1.5px;
+  border-radius: 0 0 10px 10px;
+  background: #f3f1ff;
+  transition: background .12s, box-shadow .12s, transform .12s;
+}
+
+.tecla.negra {
+  position: absolute;
+  top: 0;
+  height: 62%;
+  border-radius: 0 0 8px 8px;
+  background: #0f0b2a;
+  z-index: 2;
+  transition: background .12s, box-shadow .12s;
+}
+
+.tecla .nombre-tecla {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #8a84b8;
+  line-height: 1;
+}
+
+.tecla.encendida {
+  background: var(--c);
+  box-shadow: 0 0 24px var(--c), 0 0 0 1px var(--c);
+}
+
+.tecla.blanca.encendida { transform: translateY(2px); }
+.tecla.encendida .nombre-tecla { color: rgba(0, 0, 0, 0.55); }
+
+/* ---------------------------------------------------------------- pie y aviso */
+.pie {
+  max-width: 1240px;
+  margin: 40px auto 0;
+  padding: 0 24px 36px;
+  color: var(--texto-suave);
+  font-size: 0.88rem;
+}
+
+.pie p { margin: 2px 0; }
+
+.aviso {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: var(--texto);
+  color: var(--noche);
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------------------------------------------------------------- móvil */
+@media (max-width: 860px) {
+  .cabecera { padding: 20px 16px 4px; }
+  .modos { width: 100%; justify-content: space-between; gap: 2px; }
+  .modo { flex: 1 1 auto; padding: 9px 4px; font-size: 0.86rem; }
+  .canciones { padding: 14px 16px 16px; }
+  .tarjeta { width: 170px; }
+
+  .escenario {
+    grid-template-columns: 1fr;
+    padding: 0 12px;
+    gap: 16px;
+  }
+
+  /* el panel va ARRIBA del papel y en horizontal */
+  .panel {
+    order: -1;
+    position: static;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 18px;
+    align-items: center;
+  }
+
+  .ahora { min-height: 0; grid-row: span 2; }
+  .ahora-nota { font-size: 3.6rem; }
+  .ahora-detalle { margin-top: 2px; font-size: 0.85rem; }
+  .boton-play { width: 54px; height: 54px; }
+  .contador, .inspector { grid-column: 1 / -1; }
+  .papel { padding: 6px; border-radius: 16px; }
+  .papel-scroll { max-height: 62vh; }
+  .halo { filter: blur(44px); }
+  .piano-zona { padding: 0 12px; }
+  .piano { height: 96px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

@@ -1,0 +1,329 @@
+[
+  {
+    "imagen": "01-Negras basicas.png",
+    "nivel": "basico",
+    "pentagramas": 1,
+    "figuras": {
+      "negra": 16
+    },
+    "melodia": [
+      "MI4:n FA4:n SOL4:n LA4:n | SI4:n DO5:n RE5:n MI5:n | FA5:n MI5:n RE5:n DO5:n | SI4:n LA4:n SOL4:n FA4:n ||"
+    ]
+  },
+  {
+    "imagen": "02-Negras blancas y redonda.png",
+    "nivel": "basico",
+    "pentagramas": 1,
+    "figuras": {
+      "blanca": 4,
+      "negra": 4,
+      "redonda": 1
+    },
+    "melodia": [
+      "DO5:b SOL4:b | LA4:n SI4:n DO5:b | MI4:b FA4:n SOL4:n | DO5:r ||"
+    ]
+  },
+  {
+    "imagen": "03-Corcheas unidas.png",
+    "nivel": "basico",
+    "pentagramas": 1,
+    "figuras": {
+      "corchea": 16,
+      "negra": 2,
+      "blanca": 1
+    },
+    "melodia": [
+      "[ SOL4:c LA4:c ] [ SI4:c DO5:c ] RE5:n RE5:n | [ MI5:c RE5:c ] [ DO5:c SI4:c ] LA4:b | [ SOL4:c SOL4:c SOL4:c SOL4:c ] [ LA4:c SI4:c DO5:c RE5:c ] ||"
+    ]
+  },
+  {
+    "imagen": "04-Corcheas sueltas.png",
+    "nivel": "basico",
+    "pentagramas": 1,
+    "figuras": {
+      "corchea": 5,
+      "silencio_corchea": 1,
+      "negra": 3,
+      "blanca": 1
+    },
+    "melodia": [
+      "SOL4:c S:c LA4:c SI4:c DO5:n RE5:n | MI5:c FA5:c SOL4:n LA4:b ||"
+    ]
+  },
+  {
+    "imagen": "05-Semicorcheas unidas.png",
+    "nivel": "medio",
+    "pentagramas": 1,
+    "figuras": {
+      "semicorchea": 16,
+      "blanca": 1,
+      "corchea": 2,
+      "negra": 1
+    },
+    "melodia": [
+      "[ DO5:s SI4:s LA4:s SOL4:s ] [ FA4:s SOL4:s LA4:s SI4:s ] DO5:b | [ MI5:s RE5:s DO5:s SI4:s ] [ LA4:c SOL4:c ] [ SOL4:s LA4:s SI4:s DO5:s ] RE5:n ||"
+    ]
+  },
+  {
+    "imagen": "06-Semicorcheas sueltas y mixtas.png",
+    "nivel": "medio",
+    "pentagramas": 1,
+    "figuras": {
+      "semicorchea": 8,
+      "negra": 1,
+      "blanca": 2,
+      "corchea": 2
+    },
+    "melodia": [
+      "SOL4:s LA4:s SI4:s DO5:s RE5:n MI5:b | [ SOL4:c LA4:s SI4:s ] [ DO5:s RE5:s MI5:c ] FA5:b ||"
+    ]
+  },
+  {
+    "imagen": "07-Dos pentagramas mezcla.png",
+    "nivel": "medio",
+    "pentagramas": 2,
+    "figuras": {
+      "negra": 4,
+      "corchea": 4,
+      "semicorchea": 8,
+      "blanca": 2,
+      "redonda": 1
+    },
+    "melodia": [
+      "DO5:n [ SI4:c LA4:c ] SOL4:n [ FA4:s MI4:s FA4:s SOL4:s ] | LA4:b SOL4:b |",
+      "[ MI5:c RE5:c ] [ DO5:s SI4:s LA4:s SOL4:s ] FA4:n MI4:n | MI4:r ||"
+    ]
+  },
+  {
+    "imagen": "08-Lineas adicionales.png",
+    "nivel": "medio",
+    "pentagramas": 2,
+    "figuras": {
+      "negra": 8,
+      "blanca": 3,
+      "corchea": 4
+    },
+    "melodia": [
+      "DO4:n RE4:n MI4:n FA4:n | SOL5:n LA5:n SI5:n DO6:n |",
+      "LA3:b SI3:b | [ DO4:c RE4:c ] [ LA5:c SI5:c ] DO6:b ||"
+    ]
+  },
+  {
+    "imagen": "09-Cumpleanos feliz.png",
+    "nivel": "basico",
+    "pentagramas": 2,
+    "figuras": {
+      "corchea": 8,
+      "negra": 14,
+      "blanca": 3
+    },
+    "melodia": [
+      "[ SOL4:c SOL4:c ] | LA4:n SOL4:n DO5:n | SI4:b [ SOL4:c SOL4:c ] | LA4:n SOL4:n RE5:n | DO5:b [ SOL4:c SOL4:c ] |",
+      "SOL5:n MI5:n DO5:n | SI4:n LA4:n [ FA5:c FA5:c ] | MI5:n DO5:n RE5:n | DO5:b ||"
+    ]
+  },
+  {
+    "imagen": "10-Cumpleanos feliz con puntillo.png",
+    "nivel": "dificil",
+    "pentagramas": 4,
+    "figuras": {
+      "corchea": 4,
+      "semicorchea": 4,
+      "negra": 14,
+      "blanca": 3
+    },
+    "melodia": [
+      "[ SOL4:c. SOL4:s ] | LA4:n SOL4:n DO5:n | SI4:b |",
+      "[ SOL4:c. SOL4:s ] | LA4:n SOL4:n RE5:n | DO5:b |",
+      "[ SOL4:c. SOL4:s ] | SOL5:n MI5:n DO5:n | SI4:n LA4:n |",
+      "[ FA5:c. FA5:s ] | MI5:n DO5:n RE5:n | DO5:b. ||"
+    ]
+  },
+  {
+    "imagen": "11-Tres pentagramas mezcla.png",
+    "nivel": "medio",
+    "pentagramas": 3,
+    "figuras": {
+      "corchea": 20,
+      "negra": 13,
+      "blanca": 4,
+      "semicorchea": 20
+    },
+    "melodia": [
+      "[ FA4:c SI4:c ] [ LA4:c SOL4:c ] [ DO5:c RE5:c ] DO5:n | MI5:b [ SOL5:s FA5:s RE5:s LA4:s ] SOL4:n | DO5:b RE5:n SOL5:n |",
+      "FA5:n SOL5:n SOL5:b | [ MI5:c RE5:c ] DO5:n [ MI5:s RE5:s MI5:s SOL5:s ] [ FA5:c RE5:c ] | DO5:n [ DO5:s RE5:s MI5:c ] [ RE5:s MI5:s FA5:c ] [ RE5:c FA5:c ] |",
+      "SOL5:n FA5:n DO5:b | [ DO5:c LA4:c ] [ SI4:s DO5:s LA4:s LA4:s ] [ SOL4:c SI4:c ] [ LA4:c FA4:c ] | MI4:n [ MI4:s MI4:s RE4:s MI4:s ] FA4:n SI4:n ||"
+    ]
+  },
+  {
+    "imagen": "12-Cuatro pentagramas largo.png",
+    "nivel": "medio",
+    "pentagramas": 4,
+    "figuras": {
+      "corchea": 36,
+      "semicorchea": 54,
+      "negra": 11,
+      "blanca": 8,
+      "silencio_negra": 4
+    },
+    "melodia": [
+      "[ DO5:c FA5:s SOL5:s ] LA5:n LA5:b | [ SOL5:c LA5:s LA5:s ] FA5:b [ FA5:s MI5:s SI4:s DO5:s ] | [ SOL4:s SOL4:s FA4:c ] LA4:b [ RE5:c. DO5:s ] | S:n [ SOL4:c. FA4:s ] S:n [ DO4:c. DO4:s ] |",
+      "[ DO4:c RE4:c ] [ MI4:s FA4:s LA4:s SI4:s ] LA4:n [ SI4:s SI4:s DO5:c ] | [ MI5:s DO5:s SOL4:s MI4:s ] [ MI4:s SOL4:s MI4:s SOL4:s ] SOL4:b | LA4:n FA4:n DO4:n [ FA4:c SOL4:c ] | [ RE4:c MI4:c ] S:n S:n RE4:n |",
+      "[ RE4:s DO4:s DO4:c ] DO4:n [ DO4:s DO4:s RE4:c ] [ DO4:c DO4:c ] | RE4:b [ DO4:c. DO4:s ] [ DO4:c DO4:s FA4:s ] | [ RE4:c MI4:c ] [ FA4:s DO4:s FA4:s FA4:s ] [ SOL4:s RE4:s MI4:s DO4:s ] [ DO4:c DO4:s DO4:s ] | [ FA4:c RE4:c ] DO4:b RE4:n |",
+      "[ MI4:c SOL4:c ] [ FA4:c. RE4:s ] [ DO4:c DO4:s DO4:s ] [ DO4:c MI4:c ] | [ DO4:s FA4:s MI4:c ] MI4:n [ DO4:c MI4:c ] [ MI4:c. RE4:s ] | [ MI4:c FA4:c ] MI4:n SOL4:b | LA4:n [ RE5:s RE5:s MI5:s RE5:s ] RE5:b ||"
+    ]
+  },
+  {
+    "imagen": "13-Dificil silencios puntillos sostenidos.png",
+    "nivel": "dificil",
+    "pentagramas": 2,
+    "figuras": {
+      "negra": 4,
+      "silencio_negra": 1,
+      "corchea": 6,
+      "semicorchea": 7,
+      "silencio_corchea": 1,
+      "blanca": 2,
+      "silencio_blanca": 2,
+      "redonda": 1
+    },
+    "melodia": [
+      "DO5:n S:n [ SI4:c. LA4:s ] SOL4:n | FA#4:n S:c SOL4:c LA4:b | DO#5:n. RE5:c S:b |",
+      "[ SOL4:s LA4:s SI4:s DO5:s ] RE5:b. | [ MI5:c DO5:c ] [ LA4:s SI4:s DO5:c ] S:b | MI4:r ||"
+    ]
+  },
+  {
+    "imagen": "15-Acordes.png",
+    "nivel": "medio",
+    "pentagramas": 2,
+    "figuras": {
+      "negra": 25,
+      "blanca": 7,
+      "redonda": 4
+    },
+    "melodia": [
+      "DO4+MI4+SOL4:n FA4+LA4+DO5:n SOL4+SI4+RE5:n DO4+MI4+SOL4:n | SOL4+SI4+RE5+FA5:b DO5+MI5+SOL5:b |",
+      "LA4+DO5+MI5:n FA4+LA4+DO5:n SOL4+SI4+RE5:n SOL4+SI4+RE5+FA5:n | DO4+MI4+SOL4+DO5:r ||"
+    ]
+  },
+  {
+    "imagen": "16-Acordes y melodia.png",
+    "nivel": "dificil",
+    "pentagramas": 2,
+    "figuras": {
+      "corchea": 4,
+      "negra": 8,
+      "blanca": 8
+    },
+    "melodia": [
+      "[ SOL4:c SOL4:c ] | DO4+MI4+LA4:n SOL4:n DO5:n | SOL4+SI4+RE5+FA5:b [ SOL4:c SOL4:c ] |",
+      "LA4:n SOL4:n RE5:n | DO4+MI4+SOL4+DO5:b. ||"
+    ]
+  },
+  {
+    "imagen": "17-Bella ciao.png",
+    "nivel": "medio",
+    "pentagramas": 4,
+    "figuras": {
+      "corchea": 27,
+      "blanca": 5,
+      "negra": 8,
+      "silencio_blanca": 1
+    },
+    "melodia": [
+      "[ MI4:c LA4:c SI4:c ] | DO5:c LA4:b [ MI4:c LA4:c SI4:c ] | DO5:c LA4:b [ MI4:c LA4:c SI4:c ] |",
+      "DO5:n [ SI4:c LA4:c ] DO5:n [ SI4:c LA4:c ] | MI5:n MI5:n [ MI5:c MI5:c RE5:c MI5:c ] |",
+      "FA5:c FA5:b [ FA5:c MI5:c RE5:c ] | FA5:c MI5:b [ MI5:c RE5:c DO5:c ] |",
+      "SI4:n MI5:n DO5:n SI4:n | LA4:b S:b ||"
+    ]
+  },
+  {
+    "imagen": "18-Twinkle twinkle little star.png",
+    "nivel": "basico",
+    "pentagramas": 3,
+    "figuras": {
+      "negra": 36,
+      "blanca": 6
+    },
+    "melodia": [
+      "DO4:n DO4:n SOL4:n SOL4:n | LA4:n LA4:n SOL4:b | FA4:n FA4:n MI4:n MI4:n | RE4:n RE4:n DO4:b |",
+      "SOL4:n SOL4:n FA4:n FA4:n | MI4:n MI4:n RE4:b | SOL4:n SOL4:n FA4:n FA4:n | MI4:n MI4:n RE4:b |",
+      "DO4:n DO4:n SOL4:n SOL4:n | LA4:n LA4:n SOL4:b | FA4:n FA4:n MI4:n MI4:n | RE4:n RE4:n DO4:b ||"
+    ]
+  },
+  {
+    "imagen": "19-Jingle bells.png",
+    "nivel": "medio",
+    "pentagramas": 4,
+    "figuras": {
+      "negra": 34,
+      "blanca": 9,
+      "corchea": 8,
+      "silencio_blanca": 3
+    },
+    "melodia": [
+      "MI4:n MI4:n MI4:b | MI4:n MI4:n MI4:b | MI4:n SOL4:n DO4:n. RE4:c | MI4:b S:b |",
+      "FA4:n FA4:n FA4:n. FA4:c | FA4:n MI4:n MI4:n [ MI4:c MI4:c ] | MI4:n RE4:n RE4:n MI4:n | RE4:b SOL4:b |",
+      "MI4:n MI4:n MI4:b | MI4:n MI4:n MI4:b | MI4:n SOL4:n DO4:n. RE4:c | MI4:b S:b |",
+      "FA4:n FA4:n FA4:n. FA4:c | FA4:n MI4:n MI4:n [ MI4:c MI4:c ] | SOL4:n SOL4:n FA4:n RE4:n | DO4:b S:b ||"
+    ]
+  },
+  {
+    "imagen": "20-Himno de la alegria.png",
+    "nivel": "medio",
+    "pentagramas": 2,
+    "figuras": {
+      "negra": 26,
+      "corchea": 2,
+      "blanca": 2
+    },
+    "melodia": [
+      "MI4:n MI4:n FA4:n SOL4:n | SOL4:n FA4:n MI4:n RE4:n | DO4:n DO4:n RE4:n MI4:n | MI4:n. RE4:c RE4:b |",
+      "MI4:n MI4:n FA4:n SOL4:n | SOL4:n FA4:n MI4:n RE4:n | DO4:n DO4:n RE4:n MI4:n | RE4:n. DO4:c DO4:b ||"
+    ]
+  },
+  {
+    "imagen": "21-We wish you a merry christmas.png",
+    "nivel": "medio",
+    "pentagramas": 3,
+    "figuras": {
+      "negra": 15,
+      "corchea": 14,
+      "blanca": 1
+    },
+    "melodia": [
+      "SOL4:n | DO5:n [ DO5:c RE5:c DO5:c SI4:c ] | LA4:n LA4:n LA4:n | RE5:n [ RE5:c MI5:c RE5:c DO5:c ] |",
+      "SI4:n SOL4:n SOL4:n | MI5:n [ MI5:c FA5:c MI5:c RE5:c ] | DO5:n LA4:n [ SOL4:c SOL4:c ] |",
+      "LA4:n RE5:n SI4:n | DO5:b ||"
+    ]
+  },
+  {
+    "imagen": "22-Frere Jacques.png",
+    "nivel": "medio",
+    "pentagramas": 2,
+    "figuras": {
+      "negra": 20,
+      "blanca": 4,
+      "corchea": 8
+    },
+    "melodia": [
+      "DO4:n RE4:n MI4:n DO4:n | DO4:n RE4:n MI4:n DO4:n | MI4:n FA4:n SOL4:b | MI4:n FA4:n SOL4:b |",
+      "[ SOL4:c LA4:c SOL4:c FA4:c ] MI4:n DO4:n | [ SOL4:c LA4:c SOL4:c FA4:c ] MI4:n DO4:n | DO4:n SOL3:n DO4:b | DO4:n SOL3:n DO4:b ||"
+    ]
+  },
+  {
+    "imagen": "14-Dificil cumpleanos escaneado.png",
+    "nivel": "dificil",
+    "pentagramas": 2,
+    "figuras": {
+      "corchea": 4,
+      "semicorchea": 4,
+      "negra": 14,
+      "blanca": 3
+    },
+    "melodia": [
+      "[ SOL4:c. SOL4:s ] | LA4:n SOL4:n DO5:n | SI4:b | [ SOL4:c. SOL4:s ] | LA4:n SOL4:n RE5:n | DO5:b |",
+      "[ SOL4:c. SOL4:s ] | SOL5:n MI5:n DO5:n | SI4:n LA4:n | [ FA5:c. FA5:s ] | MI5:n DO5:n RE5:n | DO5:b. ||"
+    ]
+  }
+]

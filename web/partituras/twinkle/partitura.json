@@ -1,0 +1,958 @@
+{
+ "id": "twinkle",
+ "titulo": "Twinkle Twinkle Little Star",
+ "autor": "Popular",
+ "bpm": 100,
+ "marco": [
+  [
+   30,
+   119
+  ],
+  [
+   1058,
+   119
+  ],
+  [
+   1058,
+   759
+  ],
+  [
+   29,
+   759
+  ]
+ ],
+ "imagen": "original.png",
+ "ancho": 1088,
+ "alto": 880,
+ "dist_media": 20.0,
+ "pentagramas": [
+  [
+   119,
+   139,
+   159,
+   179,
+   199
+  ],
+  [
+   399,
+   419,
+   439,
+   459,
+   479
+  ],
+  [
+   679,
+   699,
+   719,
+   739,
+   759
+  ]
+ ],
+ "duracion_pulsos": 48.0,
+ "pasos": [
+  {
+   "archivo": "paso_lineas.png",
+   "nombre": "Pentagramas detectados",
+   "explicacion": "Proyección horizontal: las filas con mucha tinta son líneas."
+  },
+  {
+   "archivo": "paso_mascara_borrado.png",
+   "nombre": "Qué se borra",
+   "explicacion": "Solo píxeles horizontales con la altura de una línea."
+  },
+  {
+   "archivo": "paso_restaurada.png",
+   "nombre": "Sin pentagrama",
+   "explicacion": "Quedan los símbolos sueltos, listos para separarlos."
+  },
+  {
+   "archivo": "paso_resultado.png",
+   "nombre": "Notas reconocidas",
+   "explicacion": "Cabezas, figuras, acordes, silencios y puntillos."
+  }
+ ],
+ "notas": [
+  {
+   "id": 0,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "DO4",
+   "midi": 60,
+   "puntillo": false,
+   "inicio": 0.0,
+   "pulsos": 1.0,
+   "cx": 180,
+   "cy": 221,
+   "caja": [
+    167,
+    149,
+    27,
+    82
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 1,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "DO4",
+   "midi": 60,
+   "puntillo": false,
+   "inicio": 1.0,
+   "pulsos": 1.0,
+   "cx": 240,
+   "cy": 221,
+   "caja": [
+    227,
+    149,
+    27,
+    82
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 2,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 2.0,
+   "pulsos": 1.0,
+   "cx": 300,
+   "cy": 181,
+   "caja": [
+    287,
+    109,
+    27,
+    82
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 3,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 3.0,
+   "pulsos": 1.0,
+   "cx": 360,
+   "cy": 181,
+   "caja": [
+    347,
+    109,
+    27,
+    82
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 4,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "LA4",
+   "midi": 69,
+   "puntillo": false,
+   "inicio": 4.0,
+   "pulsos": 1.0,
+   "cx": 436,
+   "cy": 172,
+   "caja": [
+    423,
+    99,
+    27,
+    83
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 5,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "LA4",
+   "midi": 69,
+   "puntillo": false,
+   "inicio": 5.0,
+   "pulsos": 1.0,
+   "cx": 496,
+   "cy": 172,
+   "caja": [
+    483,
+    99,
+    27,
+    83
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 6,
+   "tipo": "blanca",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 6.0,
+   "pulsos": 2.0,
+   "cx": 556,
+   "cy": 181,
+   "caja": [
+    541,
+    109,
+    31,
+    84
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 7,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "FA4",
+   "midi": 65,
+   "puntillo": false,
+   "inicio": 8.0,
+   "pulsos": 1.0,
+   "cx": 648,
+   "cy": 192,
+   "caja": [
+    635,
+    119,
+    27,
+    83
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 8,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "FA4",
+   "midi": 65,
+   "puntillo": false,
+   "inicio": 9.0,
+   "pulsos": 1.0,
+   "cx": 708,
+   "cy": 192,
+   "caja": [
+    695,
+    119,
+    27,
+    83
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 9,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "MI4",
+   "midi": 64,
+   "puntillo": false,
+   "inicio": 10.0,
+   "pulsos": 1.0,
+   "cx": 768,
+   "cy": 201,
+   "caja": [
+    755,
+    129,
+    27,
+    82
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 10,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "MI4",
+   "midi": 64,
+   "puntillo": false,
+   "inicio": 11.0,
+   "pulsos": 1.0,
+   "cx": 828,
+   "cy": 201,
+   "caja": [
+    815,
+    129,
+    27,
+    82
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 11,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "RE4",
+   "midi": 62,
+   "puntillo": false,
+   "inicio": 12.0,
+   "pulsos": 1.0,
+   "cx": 904,
+   "cy": 212,
+   "caja": [
+    891,
+    139,
+    27,
+    82
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 12,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "RE4",
+   "midi": 62,
+   "puntillo": false,
+   "inicio": 13.0,
+   "pulsos": 1.0,
+   "cx": 964,
+   "cy": 212,
+   "caja": [
+    951,
+    139,
+    27,
+    82
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 13,
+   "tipo": "blanca",
+   "silencio": false,
+   "altura": "DO4",
+   "midi": 60,
+   "puntillo": false,
+   "inicio": 14.0,
+   "pulsos": 2.0,
+   "cx": 1024,
+   "cy": 221,
+   "caja": [
+    1009,
+    149,
+    31,
+    84
+   ],
+   "pentagrama": 1,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 14,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 16.0,
+   "pulsos": 1.0,
+   "cx": 130,
+   "cy": 461,
+   "caja": [
+    117,
+    389,
+    27,
+    82
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 15,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 17.0,
+   "pulsos": 1.0,
+   "cx": 190,
+   "cy": 461,
+   "caja": [
+    177,
+    389,
+    27,
+    82
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 16,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "FA4",
+   "midi": 65,
+   "puntillo": false,
+   "inicio": 18.0,
+   "pulsos": 1.0,
+   "cx": 250,
+   "cy": 472,
+   "caja": [
+    237,
+    399,
+    27,
+    83
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 17,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "FA4",
+   "midi": 65,
+   "puntillo": false,
+   "inicio": 19.0,
+   "pulsos": 1.0,
+   "cx": 310,
+   "cy": 472,
+   "caja": [
+    297,
+    399,
+    27,
+    83
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 18,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "MI4",
+   "midi": 64,
+   "puntillo": false,
+   "inicio": 20.0,
+   "pulsos": 1.0,
+   "cx": 386,
+   "cy": 481,
+   "caja": [
+    373,
+    409,
+    27,
+    82
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 19,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "MI4",
+   "midi": 64,
+   "puntillo": false,
+   "inicio": 21.0,
+   "pulsos": 1.0,
+   "cx": 446,
+   "cy": 481,
+   "caja": [
+    433,
+    409,
+    27,
+    82
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 20,
+   "tipo": "blanca",
+   "silencio": false,
+   "altura": "RE4",
+   "midi": 62,
+   "puntillo": false,
+   "inicio": 22.0,
+   "pulsos": 2.0,
+   "cx": 506,
+   "cy": 492,
+   "caja": [
+    491,
+    419,
+    31,
+    84
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 21,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 24.0,
+   "pulsos": 1.0,
+   "cx": 598,
+   "cy": 461,
+   "caja": [
+    585,
+    389,
+    27,
+    82
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 22,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 25.0,
+   "pulsos": 1.0,
+   "cx": 658,
+   "cy": 461,
+   "caja": [
+    645,
+    389,
+    27,
+    82
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 23,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "FA4",
+   "midi": 65,
+   "puntillo": false,
+   "inicio": 26.0,
+   "pulsos": 1.0,
+   "cx": 718,
+   "cy": 472,
+   "caja": [
+    705,
+    399,
+    27,
+    83
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 24,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "FA4",
+   "midi": 65,
+   "puntillo": false,
+   "inicio": 27.0,
+   "pulsos": 1.0,
+   "cx": 778,
+   "cy": 472,
+   "caja": [
+    765,
+    399,
+    27,
+    83
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 25,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "MI4",
+   "midi": 64,
+   "puntillo": false,
+   "inicio": 28.0,
+   "pulsos": 1.0,
+   "cx": 854,
+   "cy": 481,
+   "caja": [
+    841,
+    409,
+    27,
+    82
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 26,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "MI4",
+   "midi": 64,
+   "puntillo": false,
+   "inicio": 29.0,
+   "pulsos": 1.0,
+   "cx": 914,
+   "cy": 481,
+   "caja": [
+    901,
+    409,
+    27,
+    82
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 27,
+   "tipo": "blanca",
+   "silencio": false,
+   "altura": "RE4",
+   "midi": 62,
+   "puntillo": false,
+   "inicio": 30.0,
+   "pulsos": 2.0,
+   "cx": 974,
+   "cy": 492,
+   "caja": [
+    959,
+    419,
+    31,
+    84
+   ],
+   "pentagrama": 2,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 28,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "DO4",
+   "midi": 60,
+   "puntillo": false,
+   "inicio": 32.0,
+   "pulsos": 1.0,
+   "cx": 130,
+   "cy": 781,
+   "caja": [
+    117,
+    709,
+    27,
+    82
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 29,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "DO4",
+   "midi": 60,
+   "puntillo": false,
+   "inicio": 33.0,
+   "pulsos": 1.0,
+   "cx": 190,
+   "cy": 781,
+   "caja": [
+    177,
+    709,
+    27,
+    82
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 30,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 34.0,
+   "pulsos": 1.0,
+   "cx": 250,
+   "cy": 741,
+   "caja": [
+    237,
+    669,
+    27,
+    82
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 31,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 35.0,
+   "pulsos": 1.0,
+   "cx": 310,
+   "cy": 741,
+   "caja": [
+    297,
+    669,
+    27,
+    82
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 32,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "LA4",
+   "midi": 69,
+   "puntillo": false,
+   "inicio": 36.0,
+   "pulsos": 1.0,
+   "cx": 386,
+   "cy": 732,
+   "caja": [
+    373,
+    659,
+    27,
+    83
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 33,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "LA4",
+   "midi": 69,
+   "puntillo": false,
+   "inicio": 37.0,
+   "pulsos": 1.0,
+   "cx": 446,
+   "cy": 732,
+   "caja": [
+    433,
+    659,
+    27,
+    83
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 34,
+   "tipo": "blanca",
+   "silencio": false,
+   "altura": "SOL4",
+   "midi": 67,
+   "puntillo": false,
+   "inicio": 38.0,
+   "pulsos": 2.0,
+   "cx": 506,
+   "cy": 741,
+   "caja": [
+    491,
+    669,
+    31,
+    84
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 35,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "FA4",
+   "midi": 65,
+   "puntillo": false,
+   "inicio": 40.0,
+   "pulsos": 1.0,
+   "cx": 598,
+   "cy": 752,
+   "caja": [
+    585,
+    679,
+    27,
+    83
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 36,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "FA4",
+   "midi": 65,
+   "puntillo": false,
+   "inicio": 41.0,
+   "pulsos": 1.0,
+   "cx": 658,
+   "cy": 752,
+   "caja": [
+    645,
+    679,
+    27,
+    83
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 37,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "MI4",
+   "midi": 64,
+   "puntillo": false,
+   "inicio": 42.0,
+   "pulsos": 1.0,
+   "cx": 718,
+   "cy": 761,
+   "caja": [
+    705,
+    689,
+    27,
+    82
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 38,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "MI4",
+   "midi": 64,
+   "puntillo": false,
+   "inicio": 43.0,
+   "pulsos": 1.0,
+   "cx": 778,
+   "cy": 761,
+   "caja": [
+    765,
+    689,
+    27,
+    82
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 39,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "RE4",
+   "midi": 62,
+   "puntillo": false,
+   "inicio": 44.0,
+   "pulsos": 1.0,
+   "cx": 854,
+   "cy": 772,
+   "caja": [
+    841,
+    699,
+    27,
+    82
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 40,
+   "tipo": "negra",
+   "silencio": false,
+   "altura": "RE4",
+   "midi": 62,
+   "puntillo": false,
+   "inicio": 45.0,
+   "pulsos": 1.0,
+   "cx": 914,
+   "cy": 772,
+   "caja": [
+    901,
+    699,
+    27,
+    82
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  },
+  {
+   "id": 41,
+   "tipo": "blanca",
+   "silencio": false,
+   "altura": "DO4",
+   "midi": 60,
+   "puntillo": false,
+   "inicio": 46.0,
+   "pulsos": 2.0,
+   "cx": 974,
+   "cy": 781,
+   "caja": [
+    959,
+    709,
+    31,
+    84
+   ],
+   "pentagrama": 3,
+   "acorde": null,
+   "grupo": null
+  }
+ ]
+}

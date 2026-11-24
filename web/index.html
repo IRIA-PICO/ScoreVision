@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScoreVision: mira la música</title>
+  <meta name="description" content="Partituras leídas con visión por computador que suenan, se iluminan y se tocan con el dedo.">
+  <meta name="theme-color" content="#1a1540">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <canvas id="fondo" aria-hidden="true"></canvas>
+
+  <header class="cabecera">
+    <div class="marca">
+      <h1 class="logo">ScoreVision</h1>
+      <p class="lema">Mira la música. Tócala con el dedo.</p>
+    </div>
+    <nav class="modos" aria-label="Modo">
+      <button class="modo activo" data-modo="escuchar" aria-pressed="true">Escuchar</button>
+      <button class="modo" data-modo="tocar" aria-pressed="false">Tocar</button>
+      <button class="modo" data-modo="flow" aria-pressed="false">Flow</button>
+      <button class="modo" data-modo="camara" aria-pressed="false">Cámara</button>
+      <button class="modo" data-modo="inspector" aria-pressed="false">Inspector</button>
+    </nav>
+  </header>
+
+  <section class="canciones" id="canciones" aria-label="Canciones"></section>
+
+  <main class="escenario">
+    <div class="papel-zona">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="papel">
+        <div class="papel-scroll" id="scroll">
+          <div class="lienzo" id="lienzo">
+            <img id="partitura" alt="Partitura" draggable="false">
+            <img id="capa-paso" class="capa-paso" alt="" draggable="false" hidden>
+            <div id="corte" class="corte" hidden></div>
+            <canvas id="capa"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="camara" id="camara" hidden>
+        <div class="camara-marco" id="camara-marco">
+          <video id="video" playsinline muted></video>
+          <canvas id="capa-camara"></canvas>
+          <div class="camara-inicio" id="camara-inicio">
+            <p>Apunta la cámara a la partitura, impresa o en otra pantalla, y señala las notas con el dedo.</p>
+            <button class="boton-claro" id="encender-camara">Encender cámara</button>
+          </div>
+        </div>
+        <div class="camara-barra">
+          <p class="camara-estado" id="camara-estado"></p>
+          <button class="boton-borde" id="recalibrar" hidden>Marcar las esquinas otra vez</button>
+        </div>
+      </div>
+      <p class="ayuda" id="ayuda"></p>
+      <div class="comparador" id="comparador" hidden>
+        <label for="deslizador-paso">Desliza para comparar con la original</label>
+        <input type="range" id="deslizador-paso" min="0" max="100" value="55">
+      </div>
+    </div>
+
+    <aside class="panel">
+      <div class="ahora" id="ahora" aria-live="polite">
+        <div class="ahora-nota"><span id="ahora-nombre">♪</span><sub id="ahora-octava"></sub></div>
+        <div class="ahora-detalle" id="ahora-detalle">Elige una canción</div>
+      </div>
+
+      <div class="transporte" id="transporte">
+        <button class="boton-play" id="play" aria-label="Reproducir">
+          <svg viewBox="0 0 24 24" class="icono-play"><path d="M8 5.5v13l11-6.5z"/></svg>
+          <svg viewBox="0 0 24 24" class="icono-pausa"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+        </button>
+        <button class="boton-stop" id="stop" aria-label="Volver al principio">
+          <svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg>
+        </button>
+        <div class="progreso" id="progreso" role="slider" aria-label="Posición" tabindex="0">
+          <div class="progreso-relleno" id="progreso-relleno"></div>
+        </div>
+      </div>
+
+      <div class="tempo">
+        <label for="tempo">Tempo <output id="tempo-valor">100</output></label>
+        <input type="range" id="tempo" min="50" max="200" value="100">
+      </div>
+
+      <div class="instrumento" role="radiogroup" aria-label="Instrumento" id="instrumento"></div>
+
+      <div class="contador" id="contador" hidden></div>
+
+      <div class="inspector" id="inspector" hidden>
+        <h2>Cómo la ha leído</h2>
+        <ol class="pasos" id="pasos"></ol>
+        <p class="paso-explicacion" id="paso-explicacion"></p>
+        <div class="ficha" id="ficha">
+          <p class="ficha-vacia">Toca una nota de la partitura para ver su ficha.</p>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <div class="piano-zona">
+    <div class="piano" id="piano" aria-label="Piano"></div>
+  </div>
+
+  <footer class="pie">
+    <p>Las notas las ha leído OpenCV a partir de la imagen. El sonido lo genera tu navegador.</p>
+    <p>ScoreVision, proyecto de Visión por Computador.</p>
+  </footer>
+
+  <div class="aviso" id="aviso" hidden></div>
+
+  <script src="partituras/datos.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

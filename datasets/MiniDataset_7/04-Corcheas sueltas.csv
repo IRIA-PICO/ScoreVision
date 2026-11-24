@@ -1,0 +1,11 @@
+numero,pentagrama,clase,tipo,altura,puntillo,duracion_pulsos,x_cabeza,y_cabeza,grupo_id,acorde_id
+1,1,nota,corchea,SOL4,0,0.5,180,180,,
+2,1,silencio,silencio_corchea,,0,0.5,248,160,,
+3,1,nota,corchea,LA4,0,0.5,298,170,,
+4,1,nota,corchea,SI4,0,0.5,366,160,,
+5,1,nota,negra,DO5,0,1,434,150,,
+6,1,nota,negra,RE5,0,1,494,140,,
+7,1,nota,corchea,MI5,0,0.5,570,130,,
+8,1,nota,corchea,FA5,0,0.5,638,120,,
+9,1,nota,negra,SOL4,0,1,706,180,,
+10,1,nota,blanca,LA4,0,2,766,170,,
